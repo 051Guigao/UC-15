@@ -25,14 +25,14 @@ const ListaPokemon = () => {
         const dados = await resposta.json()
 
         const lista: Pokemon[] = await Promise.all(
-          dados.results.map(async (p: { name: string; url: string }) => {
-            const res = await fetch(p.url)
-            const d = await res.json()
+          dados.results.map(async (poke: { name: string; url: string }) => {
+            const resp = await fetch(poke.url)
+            const dado = await resp.json()
             return {
-              id: d.id,
-              nome: d.name,
-              tipo: d.types.map((t: any) => t.type.name).join(', '),
-              image: d.sprites.front_default,
+              id: dado.id,
+              nome: dado.name,
+              tipo: dado.types.map((res: any) => res.type.name).join(', '),
+              image: dado.sprites.front_default,
             }
           })
         )
