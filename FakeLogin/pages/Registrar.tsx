@@ -6,6 +6,13 @@ const Registrar = () => {
     <View style={styles.tela}>
       <View style={styles.container}>
         <Text style={styles.titulo}>Crie sua conta</Text>
+
+        <TextInput
+          style={styles.input}
+          placeholder='Digite seu Nome'
+          placeholderTextColor="#9CA3AF"
+        />
+
         <TextInput
           style={styles.input}
           placeholder='Digite seu Email'
@@ -13,7 +20,7 @@ const Registrar = () => {
         />
         <TextInput
           style={styles.input}
-          placeholder='Crie sua senha'
+          placeholder='Crie sua Senha'
           placeholderTextColor="#9CA3AF"
         />
         <TouchableOpacity
